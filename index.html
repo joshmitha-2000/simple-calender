@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .index{
+            border: 1px solid black;
+            width: 550px;
+            height:800px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;  
+
+            align-items: center;
+            flex-direction: row;
+          
+            
+            margin:4px;
+
+        }
+        .week{
+            display: flex;
+            gap:30px;
+            justify-content: center;
+            border-bottom: 1px solid black;
+            color: blue;
+        }
+        .days{
+            display: flex;
+            gap:30px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .week > p{
+            font-weight: bold;
+            flex: 0 0 50px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .date{
+            flex: 0 0 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .today{
+
+  position: relative;
+
+  font-weight: 600;
+}
+.today::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  border: 2px solid hsl(239 50% 50%);
+  border-radius: 50%;
+}
+
+        
+        
+       
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <article class="index">
+            <header>
+                <h2 id="current-month">Current Month</h2>
+                <p id="full-date"> Full date</p>
+            </header>
+            <section class="week">
+                <p>S</p>
+                <p>M</p>
+                <p>T</p>
+                <p>W</p>
+                <p>T</p>
+                <p>F</p>
+                <p>S</p>
+            </section>
+            <section class="days">
+                <p class="date"></p>
+                <p class="date"></p>
+                <p class="date"></p>
+                <p class="date">2</p>
+                <p class="date">3</p>
+                <p class="date">4</p>
+                <p class="date">5</p>
+                <p class="date">6</p>
+                <p class="date">7</p>
+            </section>
+        </article>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
